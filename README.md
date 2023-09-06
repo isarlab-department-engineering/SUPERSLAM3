@@ -57,7 +57,7 @@ The DBOW3 vocabulary can be downloaded from [google drive](https://drive.google.
 For more informations please refer to [this repo](https://github.com/KinglittleQ/SuperPoint_SLAM/tree/master).
 
 ## Nvidia-driver & Cuda Toolkit 10.2 with cuDNN 7.6.5
-Please, follow [this](https://developer.nvidia.com/cuda-10.2-download-archive) instructions for installing the Cuda Toolkit 10.2.
+Please, follow these [instructions](https://developer.nvidia.com/cuda-10.2-download-archive) for the installation of the Cuda Toolkit 10.2.
 
 The CUDA installation can be verified by running:
 ``` shell
