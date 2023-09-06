@@ -15,15 +15,15 @@ In the SUPERSLAM3 pipeline, input images are converted to grayscale and fed into
 - We are currently testing the project on Ubuntu 20.04 and 22.02 with upgraded CUDA, CuDNN, and libtorch libraries. </br>-->
 
 ## Related Publications:
-
 [ORB-SLAM3] Carlos Campos, Richard Elvira, Juan J. Gómez Rodríguez, José M. M. Montiel and Juan D. Tardós, **ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM**, *IEEE Transactions on Robotics 37(6):1874-1890, Dec. 2021*. **[PDF](https://arxiv.org/abs/2007.11898)**.
 
 [Superpoint] DeTone, Daniel, Tomasz Malisiewicz, and Andrew Rabinovich. **Superpoint: Self-supervised interest point detection and description.** Proceedings of the IEEE conference on computer vision and pattern recognition workshops. 2018, **[PDF](https://arxiv.org/abs/1712.07629v4)**.
 
-[DBoW2 Place Recognition] Dorian Gálvez-López and Juan D. Tardós. **Bags of Binary Words for Fast Place Recognition in Image Sequences**. *IEEE Transactions on Robotics,* vol. 28, no. 5, pp. 1188-1197, 2012. **[PDF](http://doriangalvez.com/php/dl.php?dlp=GalvezTRO12.pdf)**
+[DBoW2 Place Recognition] Dorian Gálvez-López and Juan D. Tardós. **Bags of Binary Words for Fast Place Recognition in Image Sequences**. *IEEE Transactions on Robotics,* vol. 28, no. 5, pp. 1188-1197, 2012, **[PDF](http://doriangalvez.com/php/dl.php?dlp=GalvezTRO12.pdf)**.
+
+[SuperPoint-SLAM] Deng, Chengqi, et al. **Comparative study of deep learning based features in SLAM.** 2019 4th Asia-Pacific Conference on Intelligent Robot Systems (ACIRS). IEEE, 2019, **[PDF](https://ieeexplore.ieee.org/abstract/document/8935995?casa_token=sEqTDfOsz-4AAAAA:WWFr0OAw4lb8yZfJs1EVUcIoOjEMFru0Re2iKnkDRoDTXnhflEYxkMt63iXHb-TwVrZ1D3zB)**.
 
 ### Citing:
-
 **If you use SUPERSLAM3 in an academic work, please cite:**
 ```
   @article{mollica2023integrating,
@@ -91,7 +91,7 @@ wget -O LibTorch.zip https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-
 sudo unzip LibTorch.zip -d /usr/local
 ```
 
-## 2. Building SuperPoint-SLAM library and examples
+## 2. Building SUPERSLAM3 library and examples
 Clone the repository:
 ```shell
 git clone --recursive https://github.com/isarlab-department-engineering/SUPERSLAM3
