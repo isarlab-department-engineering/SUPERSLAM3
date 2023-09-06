@@ -74,7 +74,7 @@ Verify the nvidia driver availability:
 nvidia-smi
 ```
 
-Download [CuDNN 7.6.5](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.2_20191118/Ubuntu18_04-x64/libcudnn7-dev_7.6.5.32-1%2Bcuda10.2_amd64.deb) from the official NVidia page, and install the headers and libraries in the local CUDA installation folder:
+Download [CuDNN 7.6.5](https://developer.download.nvidia.com/compute/redist/cudnn/v7.6.5/cudnn-10.2-linux-x64-v7.6.5.32.tgz) from the official NVidia page, and install the headers and libraries in the local CUDA installation folder:
 
 ``` shell
 sudo cp -P <PATH_TO_CUDNN_FOLDER>/include/cudnn.h <PATH_TO_CUDA10.1_FOLDER>/include/
