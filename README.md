@@ -6,13 +6,17 @@ SUPERSLAM3 is a visual odometry pipeline that combines the Superpoint-based fron
 
 In the SUPERSLAM3 pipeline, input images are converted to grayscale and fed into the Superpoint detector pipeline (A). The Superpoint encoder-decoder pipeline consists of a learned encoder, utilizing several convolutional layers, and two non-learned decoders for joint feature and descriptor extraction. The detected features are then processed by the ORB-SLAM3 backend, which comprises three primary components operating in parallel threads: the Tracking, Local Mapping, and Loop & Map Merging threads (B). The backend extracts keyframes, initializes and updates the map, and performs both local and global motion and pose estimation within the Local Mapping Thread and Loop & Map Merging thread. If a loop closure is detected, the pose estimation is further refined.
 
+This repository was forked from [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3). The pre-trained model of SuperPoint come from the official [MagicLeap 
+repository](https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork).
+
 <!-- The [Changelog](https://https://github.com/isarlab-department-engineering/SUPERSLAM3/edit/main/README.md) describes the features of each version. -->
+<!--***6, September 2023 update***</br> 
+- REPOSITORY UNDER CONSTRUCTION: We are in the process of uploading and building the GitHub repository.  </br> -->
 
-***6, September 2023 update***</br> 
-- REPOSITORY UNDER CONSTRUCTION: We are in the process of uploading and building the GitHub repository.  </br>
-
-<!-- - SUPERSLAM3 v1.0 is now publicly available!  </br> 
-- We are currently testing the project on Ubuntu 20.04 and 22.02 with upgraded CUDA, CuDNN, and libtorch libraries. </br>-->
+***7, September 2023 update***</br> 
+- SUPERSLAM3 v1.0 is now publicly available!  </br>
+- REPOSITORY UNDER CONSTRUCTION: We are in the process of uploading and building the GitHub repository.
+- We are currently testing the project on Ubuntu 20.04 and 22.02 with upgraded CUDA, CuDNN, and libtorch libraries. </br>
 
 ## Related Publications:
 [ORB-SLAM3] Carlos Campos, Richard Elvira, Juan J. Gómez Rodríguez, José M. M. Montiel and Juan D. Tardós, **ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM**, *IEEE Transactions on Robotics 37(6):1874-1890, Dec. 2021*. **[PDF](https://arxiv.org/abs/2007.11898)**.
@@ -105,7 +109,15 @@ Clone the repository:
 git clone --recursive https://github.com/isarlab-department-engineering/SUPERSLAM3
 ```
 
-Use the provided script `build.sh` to build the *Thirdparty* libraries and *SUPERSLAM3* project. Please make sure you have **installed all required dependencies** (see section 1). Execute:
+Use the provided script `build.sh` to build the *Thirdparty* libraries and *SUPERSLAM3* project. Please make sure you have **installed all required dependencies** (see section 1). 
+
+Open the build.sh file and modify the weights file path according to the absolute path of the weights file in your PC (<PATH_TO_SUPERSLAM3_FOLDER>/Weights/superpoint.pt)
+
+```
+cmake .. -DCMAKE_BUILD_TYPE=Release -DSUPERPOINT_WEIGHTS_PATH="<PATH_TO_SUPERSLAM3_FOLDER>/Weights/superpoint.pt"
+```
+
+Build the project:
 
 ```shell
 cd <PATH_TO_SUPERSLAM3_FOLDER>
