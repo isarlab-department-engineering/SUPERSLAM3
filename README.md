@@ -59,17 +59,20 @@ For more informations please refer to [this repo](https://github.com/KinglittleQ
 ## Nvidia-driver & Cuda Toolkit 10.2 with cuDNN 7.6.5
 Please, follow these [instructions](https://developer.nvidia.com/cuda-10.2-download-archive) for the installation of the Cuda Toolkit 10.2.
 
-The CUDA installation can be verified by running:
-``` shell
-nvcc -V
-```
-
 If not installed during the Cuda Toolkit installation process, please install the nvidia driver 440:
 ``` shell
 sudo apt-get install nvidia-driver-440
 ```
 
-Verify the nvidia driver availability:
+Export Cuda paths 
+``` shell
+echo 'export PATH=/usr/local/cuda-10.2/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+source ~/.bashrc
+sudo ldconfig  
+```
+
+Verify the Nvidia driver availability:
 ``` shell
 nvidia-smi
 ```
@@ -77,10 +80,15 @@ nvidia-smi
 Download [CuDNN 7.6.5](https://developer.download.nvidia.com/compute/redist/cudnn/v7.6.5/cudnn-10.2-linux-x64-v7.6.5.32.tgz) from the official NVidia page, and install the headers and libraries in the local CUDA installation folder:
 
 ``` shell
-sudo cp -P <PATH_TO_CUDNN_FOLDER>/include/cudnn.h <PATH_TO_CUDA10.1_FOLDER>/include/
-sudo cp -P <PATH_TO_CUDNN_FOLDER>/include/cudnn_version.h <PATH_TO_CUDA10.1_FOLDER>/include/
-sudo cp -P <PATH_TO_CUDNN_FOLDER>/lib64/libcudnn* <PATH_TO_CUDA10.1_FOLDER>/lib64/
-sudo chmod a+r <PATH_TO_CUDA10.1_FOLDER>/lib64/libcudnn*	
+sudo cp -P <PATH_TO_CUDNN_FOLDER>/cuda/include/cudnn.h <PATH_TO_CUDA10.1_FOLDER>/include/
+sudo cp -P <PATH_TO_CUDNN_FOLDER>/cuda/include/cudnn_version.h <PATH_TO_CUDA10.1_FOLDER>/include/
+sudo cp -P <PATH_TO_CUDNN_FOLDER>/cuda/lib64/libcudnn* <PATH_TO_CUDA10.1_FOLDER>/lib64/
+sudo chmod a+r <PATH_TO_CUDA10.2_FOLDER>/lib64/libcudnn*	
+```
+
+The CUDA installation can be verified by running:
+``` shell
+nvcc -V
 ```
 
 ## LibTorch 1.6.0 version (with GPU | Cuda Toolkit 10.2, cuDNN 7.6.5)
