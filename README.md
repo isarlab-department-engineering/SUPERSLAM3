@@ -81,10 +81,10 @@ Download [CuDNN 7.6.5](https://developer.download.nvidia.com/compute/redist/cudn
 
 ``` shell
 sudo cp -P <PATH_TO_CUDNN_FOLDER>/cuda/include/cudnn.h <PATH_TO_CUDA10.1_FOLDER>/include/
-sudo cp -P <PATH_TO_CUDNN_FOLDER>/cuda/include/cudnn_version.h <PATH_TO_CUDA10.1_FOLDER>/include/
 sudo cp -P <PATH_TO_CUDNN_FOLDER>/cuda/lib64/libcudnn* <PATH_TO_CUDA10.1_FOLDER>/lib64/
 sudo chmod a+r <PATH_TO_CUDA10.2_FOLDER>/lib64/libcudnn*	
 ```
+<!-- sudo cp -P <PATH_TO_CUDNN_FOLDER>/cuda/include/cudnn_version.h <PATH_TO_CUDA10.1_FOLDER>/include/ -->
 
 The CUDA installation can be verified by running:
 ``` shell
@@ -117,7 +117,7 @@ chmod +x build.sh
 ### EUROC Dataset
 To test SUPERSLAM3 with the EUROC dataset:
 
-1) Download the MH01 sequence (ASL Dataset format) from [this link](http:https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets#downloads).
+1) Download the MH01 sequence (ASL Dataset format) from [this link](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets#downloads).
 
 2) Unzip the downloaded sequence and execute the following command. Change PATH_TO_MH01_SEQUENCE_FOLDER to the uncompressed dataset folder.
 
