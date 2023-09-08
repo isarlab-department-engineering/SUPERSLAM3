@@ -103,7 +103,7 @@ wget -O LibTorch.zip https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-
 sudo unzip LibTorch.zip -d /usr/local
 ```
 
-## 2. Building SUPERSLAM3 library and examples
+# 2. Building SUPERSLAM3 library and examples
 Clone the repository:
 ```shell
 git clone --recursive https://github.com/isarlab-department-engineering/SUPERSLAM3
@@ -125,8 +125,8 @@ chmod +x build.sh
 ./build.sh
 ```
 
-## 3. Monocular Examples
-### EUROC Dataset
+# 3. Monocular Examples
+## EUROC Dataset
 To test SUPERSLAM3 with the EUROC dataset:
 
 1) Download the MH01 sequence (ASL Dataset format) from [this link](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets#downloads).
